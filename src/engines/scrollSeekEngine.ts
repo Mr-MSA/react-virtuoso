@@ -79,7 +79,7 @@ export function scrollSeekEngine({ isScrolling$, scrollTop$, rangeChanged$: rang
 
   combineLatest(isSeeking$, scrollVelocity$, range$)
     .pipe(withLatestFrom(scrollSeekConfiguration$))
-    .subscribe(([[isSeeking, velocity, range], config]) => isSeeking && config && config!.change(velocity, range))
+    .subscribe(([[isSeeking, velocity, range ], config]) => isSeeking && config && config!.change(velocity, range))
 
   return { isSeeking$, scrollSeekConfiguration$, scrollVelocity$ }
 }
